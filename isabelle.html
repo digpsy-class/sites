@@ -25,7 +25,16 @@
         }
         .image {
           text-align= center;
+          transform: rotate(20deg);
+          animation: rotate 2s infinite linear;
         }
+        @keyframes rotate {
+          from {
+            transform: rotate(20deg);
+          }
+          to {
+            transform: rotate(100deg)
+          }
         .a {
           color:#f291a7;
           font-family: "Helvetica";
