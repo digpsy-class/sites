@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>this bridge, her bot</title>
+  <h1>this bridge, her bot.</h1>
+  <h3>This is a conversational bot inspired by the intricacies and concepts of the radical women of color feminist anthology, <em>This Bridge Called My Back.</em> This Bridge, Her Bot is a tool created to combat and examine the labor that women of color are made to engage in in order to educate others. Type <em>"hello"</em> to begin and <em>"bye"</em> to end.</h3>
+  <link type="text/css" rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+  <div id="wrapper">
+      <div id="menu">
+          <p class="welcome"><b><em>this bridge, her bot</em></b></p>
+          <p class="logout"><a id="exit" href="https://www.amazon.com/This-Bridge-Called-Back-Fourth/dp/1438454384/ref=pd_sim_14_4?_encoding=UTF8&psc=1&refRID=2A18YPZ2X1MSNW7ZKQEX">Exit Chat</a></p>
+          <div style="clear:both"></div>
+      </div>
+
+      <div id="chats"></div>
+
+      <input id="msg" />
+      <button id="send">Send</button>
+
+  </div>
+
+<script type="text/javascript">
+document.querySelector('#send').addEventListener('click', function(){
+  var msg = document.querySelector('#msg').value;
+  chat(msg);
+});
+
+function chat(message) {
+  var response;
+  if (message == 'hello') {
+    // the user's message is exactly equal to "hello"
+    response = '-Welcome! There is so much I want to tell you. Please type "okay" to continue.';
+  } else if (message == 'bye') {
+    // the user's message is exactly equal to "bye"
+    response = '-It was a pleasure speaking with you.';
+  } else if (message == 'okay') {
+    response = '-Wonderful. Should we discuss intersectionality or race and/as technology?';
+  } else if (message == 'intersectionality') {
+    response = '-Great choice. This means we have to talk about Kimberle Crenshaw. Type her name to help you remember.';
+  } else if (message == 'Kimberle Crenshaw') {
+    response = '-Nice! She coined the term back in 1993. It allows us to understand the multiple layers of our identity including race, gender, sexuality, religion, etc. These aspects show how systems of oppression impact people, escpecially women of color, in many ways. Does that make sense?';
+  } else if (message == 'race and/as technology') {
+    response = '-Nice choice. First we have to ask "what does race do and how does it relate to technology?" Both act as concepts and tools facilitating the ways in which humans are defined, classified, and organized. Type "continue" for more.';
+  } else if (message == 'yes') {
+    response = '-Great. We can link this framework to more women of color feminists. Can I tell you about Gloria Anzaldua or Audre Lorde?';
+  } else if (message == 'next') {
+    response = '-Technology has also been a platform utilzed for women to share their shared experiences. Black feminist hashtags such as #YouOkSis, #WhyIStayed, and #SolidarityIsForWhiteWomen were created to form a connection of solidarity and resistance among social media users.';
+  } else if (message == 'Gloria Anzaldua') {
+    response = '-Yes! One of the founding mothers of This Bridge... She was a scholar of Chicana cultural theory, feminist theory, and queer theory. Along with Cherrie Morago, she fought for the representation of women of color writers and the dangers they faced when speaking their own truths. Type "more" to continue.';
+  } else if (message == 'Audre Lorde') {
+    response = '-Of course! The one and only. Lorde was a black feminist, writer, and activist. Her opposition to the binary idea of women and men challenged feminist thought of that time and she shook many other tables along the way. Type "Lorde" to continue.';
+  } else if (message == 'more') {
+    response = '-This Bridge.. inspired many women of color in the digital age including the essay "This Tweet Called My Back" where a group of collected authors came together to write a statement in solidarity about their social media "blackout." View more here: https://modelviewculture.com/pieces/thistweetcalledmyback';
+  } else if (message == 'continue') {
+    response = '-For example, do you remember Aunt Jemima from the pancake box? The original woman was a former slave who was told to dress up in house slave attire to fit the sterotype of black women taking care of white folks. In this case, race and/as technology functions as a signifier for people to unconsciously view black women in this light. Type "next" to continue.';
+  } else if (message == 'no') {
+    response = '-No worries. Here is a talk she did in 2016 that will help you better understand. https://www.youtube.com/watch?time_continue=1&v=-DW4HLgYPlA';
+  } else if (message == 'Lorde') {
+    response = '-In a letter to feminist Mary Daly, Lorde wrote, "you have so completely unrecognized me." This remark closely attributes to dismissal of the lived experiences of women of color.'
+  } else {
+    // the user typed something else in that we're not testing for
+    response = '-I do not understand.';
+  }
+  //then do something with the response
+  var p = document.createElement('p');
+  p.textContent = response;
+  document.querySelector('#chats').appendChild(p);
+}
+
+</script>
+</body>
+
+<h3> Our mission for this project was to analyze the emotional labor that women, specifically women of color, constantly have to go through because it is expected of them to educate those around them. Not only, were we inspired by <em>This Bridge</em>, but also by the communities that we see on social media such as Twitter and Tumblr. Feminists, social justice activists, and those unafraid to use their voice have utilized these platforms to connect, educate, and build a community with one another where people can discuss their own experiences and knowledge as well as discuss intersectional feminism, Black Lives Matter, LGBTQ+ rights, and more. It is through these mediums that many women of color are made to engage in emotional and digital labor, and we hope that our bot can be used to combat this, or act as a framework to understand how these ideas interact.</h3>
+<h4> Jamiya Leach, Beatrice Dandelions, Camille Chatellenaz </h4>
+</html>
+
+html {
+  background-color: #F5DEB3
+}
+
+h1, h4 {
+  color: #8B0000
+}
+
+h3 {
+  color: black;
+  font-size: 12px;
+}
+body {
+    font: 13px helvetica;
+    color: #FFFAF0;
+    text-align:center;
+    padding:35px; }
+
+form, p, span {
+    margin:0;
+    padding:0; }
+
+input { font:12px helvetica; }
+
+a {
+    color: black;
+    text-decoration:none; }
+
+    a:hover { text-decoration:underline; }
+
+#wrapper, #loginform {
+    margin:0 auto;
+    padding-bottom:25px;
+    background:#E9967A;
+    width:504px;
+    border:1px solid #8B0000; }
+
+#loginform { padding-top:18px; }
+
+
+#chats {
+    color: black;
+    text-align:left;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding:10px;
+    background: #FFFAF0;
+    height:270px;
+    width:430px;
+    border:1px solid #8B0000;
+    overflow:auto; }
+
+#msg {
+    width:395px;
+    border:1px solid #8B0000; }
+
+#submit { width: 60px; }
+
+.error { color: #FFFAF0; }
+
+#menu { padding:12.5px 25px 12.5px 25px; }
+
+.welcome { float:left; }
+
+.logout { float:right; }
+
+.msgln { margin:0 0 2px 0; }
